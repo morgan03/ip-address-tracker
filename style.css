@@ -1,0 +1,148 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Rubik', sans-serif;
+}
+
+.container-fluid{
+  padding:0;
+}
+
+.background-heading{
+  position:relative;
+  background:url("images/pattern-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding:10px 0;
+}
+
+.background-heading h1{
+  font-size:20px;
+  color:hsl(0, 0%, 100%);
+}
+
+.background-heading label{
+  margin-bottom: 80px;
+  position:relative;
+}
+
+.background-heading input{
+  width: 320px;
+  height:50px;
+  padding: 10px 6px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.address-info{
+  z-index: 1000;
+  position: absolute;
+  top:150px;
+  width:75%;
+  margin:auto;
+  border: 1px solid #000;
+  background-color: hsl(0, 0%, 100%);
+  padding:20px 15px;
+  border-radius:20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-info div:not(:first-child){
+  border-left:none;
+}
+
+
+
+.btn-submit{
+  border:none;
+  padding:10px 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin:auto;
+  width:40px;
+  height:50px;
+  background:url("images/icon-arrow.svg") #2b2b2b;
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position:absolute;
+  top:0;
+  bottom: 0;
+  right:0;
+}
+
+.input-result{
+  font-size:18px;
+  font-weight: bold;
+}
+
+.address-info div{
+  flex:auto;
+}
+
+.address-text{
+  font-size:15px;
+  color:hsl(0, 0%, 59%);
+}
+
+.input-result, .address-text{
+  text-align: center;
+}
+
+#mapid{
+  height:100vh;
+}
+
+.user-address{
+  border:none;
+}
+
+.error-msg{
+  color:red;
+  font-weight: bold;
+}
+
+.error-input{
+  border:1px solid red;
+}
+
+
+@media screen and (min-width:1000px){
+  .background-heading h1{
+    font-size:25px;
+  }
+
+  .background-heading input{
+    width:550px;
+    padding: 10px 15px;
+  }
+
+  .address-info{
+    position:static;
+    flex-direction: row;
+    align-items:stretch;
+  }
+
+  .address-text{
+    font-size:18px;
+  }
+
+  .input-result, .address-text{
+    text-align: left;
+  }
+
+  .address-info div:not(:first-child){
+    border-left:1px solid #000;
+  }
+
+  #mapid{
+    margin-top:-70px;
+  }
+}
